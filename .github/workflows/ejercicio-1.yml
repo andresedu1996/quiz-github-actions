@@ -1,17 +1,19 @@
 name: Ejercicio 1
+
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Step 1 - Imprimir nombre
-        run: echo "Hola, mi nombre es Andres Lopez Alfaro"
+      - name: Imprimir nombre
+        run: echo Hola, mi nombre es Andres Lopez Alfaro
 
-      - name: Step 2 - Imprimir fecha y hora actual
+      - name: Imprimir fecha y hora actual
         run: date
 
-      - name: Step 3 - Imprimir sistema operativo
-        run: echo "El sistema operativo es: ${{ runner.os }}"
+      - name: Imprimir sistema operativo
+        run: echo $RUNNER_OS
